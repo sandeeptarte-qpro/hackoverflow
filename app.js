@@ -78,12 +78,12 @@ function handler(req, res) {
 	}
 }
 
-io.on('connection', function (client) {
+io.on('connection', socket => {
 	console.log('Client connected...');
 
-	client.on('join', function (data) {
+    socket.on('mouseDown', function (data) {
 		console.log(data);
-		client.emit('messages', 'Hello from server ' + data);
+		io.sockets.emit("mouseDownClient"+ data);
 	});
 });
 
