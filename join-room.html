@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body background="/images/gamestart.png" bgcolor="black" style="background-repeat: no-repeat; background-position: center top">
+        <form action="/joinRoom" method="post">
+            <input type="submit" value="Send">
+            <input type="submit" value="sayali">
+        </form>
+         <script src="/jquery/dist/jquery.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </body>
+</html>
+
+<script>
+    var socket = io.connect('http://127.0.0.1:4200');
+    socket.on('connect', function(data) {
+        socket.emit('join', 'Hello World from client');
+    });
+    socket.on('messages', function(data) {
+    });
+</script>
