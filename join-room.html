@@ -1,23 +1,37 @@
 <!doctype html>
 <html lang="en">
-    <head>
+<head>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body background="/images/gamestart.png" bgcolor="black"
+      style="background-repeat: no-repeat; background-position: center top; margin: 0 auto; padding: 0;">
+<div class="radio-btn">
+<label class="container">Team 1
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+</label>
 
-    </head>
-    <body background="/images/gamestart.png" bgcolor="black" style="background-repeat: no-repeat; background-position: center top">
-        <form action="/joinRoom" method="post">
-            <input type="submit" value="Send">
-            <input type="submit" value="sayali">
-        </form>
-         <script src="/jquery/dist/jquery.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
-    </body>
+<label class="container">Team 2
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+</label>
+</div>
+<form action="/joinRoom" method="post">
+    <div>
+        <input class="input-class" type="text" placeholder="Enter pin">
+        <button class="start-btn" type="submit">JOIN ROOM</button>
+    </div>
+</form>
+<script src="/jquery/dist/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
 </html>
 
 <script>
     var socket = io.connect('http://127.0.0.1:4200');
-    socket.on('connect', function(data) {
+    socket.on('connect', function (data) {
         socket.emit('join', 'Hello World from client');
     });
-    socket.on('messages', function(data) {
+    socket.on('messages', function (data) {
     });
 </script>

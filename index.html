@@ -1,26 +1,10 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <style>
-            .start-btn {
-                background: yellow; color: black; font-size: 20px; font-weight: bold; font-family: arial; height: 52px; width: 90%; position: absolute;  border: none; outline: none; left:5%; top: 80%;
-            }
-            .start-btn:first-child {
-                top:70%;
-            }
-            .start-btn:hover {
-                background: chartreuse;
-                cursor:pointer;
-            }
-            .header {
-                text-align: center;
-                font-family: 'cursive';
-                font-weight: 300;
-                font-size: 70px;
-            }
-        </style>
+        <link rel="stylesheet" href="app.css">
     </head>
-    <body background="/images/gamestart.png" bgcolor="black" style="background-repeat: no-repeat; background-position: center top">
+    <body background="/images/gamestart.png" bgcolor="black" style="background-repeat: no-repeat; background-position: center top; margin: 0 auto; padding: 0;">
+    <h1 class="header">PRO STRIKE</h1>
         <form action="/joinRoom" method="post">
             <button type="submit"  class="start-btn">Join Room</button>
             <button class="start-btn">Create Room</button>
