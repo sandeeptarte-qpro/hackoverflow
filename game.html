@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #board {
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: center;
+            padding-top: 60px;
+        }
+
+        #myCanvas {
+            border: 1px solid #000;
+        }
+    </style>
+    <script type="text/JavaScript" src="/public/socket-io.js"></script>
+    <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script type="text/JavaScript" src="/public/script.js"></script>
+    <div id="board">
+        <canvas id="myCanvas" width="800px" height="800px">
+            Sorry, your browser doesn't support canvas technology.
+        </canvas>
+
+    </div>
+    </body>
+</html>
+
+<script>
+    var socket = io.connect('http://127.0.0.1:4200');
+    socket.on('connect', function(data) {
+        socket.emit('join', 'Hello World from client');
+    });
+    socket.on('messages', function(data) {
+    });
+</script>
