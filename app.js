@@ -10,6 +10,13 @@ app.get('/*', function (req, res, next) {
 	handler(req, res);
 });
 
+app.post('/joinRoom', function (req, res) {
+	var fileToLoad = fs.readFileSync('join-room.html', "utf8");
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.write(fileToLoad);
+	res.end();
+});
+
 
 function handler(req, res) {
 	var pathname = url.parse(req.url).pathname;
