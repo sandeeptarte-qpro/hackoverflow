@@ -7,7 +7,7 @@ html,body {
     height: 100%;
 }
 .body-class {
-    background-image: url("images/gamestart.png");
+    background-image: url("images/armyman2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -71,7 +71,7 @@ html,body {
 
 
 .radio-btn {
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translate(-50%,0);
     display: inline-block;
