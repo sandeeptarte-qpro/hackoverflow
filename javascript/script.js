@@ -3,6 +3,15 @@ window.onload = function () {
     var curColor = $('#selectColor option:selected').val();
     var isDown      = false;
     var ctx = myCanvas.getContext("2d");
+    var img = document.getElementById("wall");
+    ctx.drawImage(img, 70, 70,30,650);
+    ctx.drawImage(img, 680, 70,30,650);
+    ctx.drawImage(img, 180, 180,120,120);
+    ctx.drawImage(img, 180, 500,120,120);
+    ctx.drawImage(img, 500, 180,120,120);
+    ctx.drawImage(img, 500, 500,120,120);
+    ctx.drawImage(img, 340, 340,120,100);
+
     var canvasX, canvasY;
     ctx.lineWidth = 5;
 
