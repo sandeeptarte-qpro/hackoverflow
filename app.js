@@ -17,6 +17,15 @@ app.post('/joinRoom', function (req, res) {
     res.end();
 });
 
+app.post('/waitRoom', function (req, res) {
+    // console.log(req.);
+    var fileToLoad = fs.readFileSync('waiting-room.html', "utf8");
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(fileToLoad);
+    res.end();
+});
+
+
 app.post('/joinTeam', function (req, res) {
     var fileToLoad = fs.readFileSync('start-game.html', "utf8");
     res.writeHead(200, {'Content-Type': 'text/html'});
