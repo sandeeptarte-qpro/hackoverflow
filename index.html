@@ -5,11 +5,12 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <div id="future"></div>
+        <img src="./images/gamestart.png" alt="name" width="500" height="600"/>
+        <!--<div id="future"></div>
         <form id="form" id="chat_form">
             <input id="chat_input" type="text">
             <input type="submit" value="Send">
-        </form>
+        </form>-->
          <script src="/jquery/dist/jquery.js"></script>
         <script src="/socket.io/socket.io.js"></script>
     </body>
@@ -21,6 +22,6 @@
         socket.emit('join', 'Hello World from client');
     });
     socket.on('messages', function(data) {
-        alert(data);
+        // alert(data);
     });
 </script>
