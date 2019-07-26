@@ -1,24 +1,28 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="app.css">
-    </head>
-    <body background="/images/gamestart.png" bgcolor="black" style="background-repeat: no-repeat; background-position: center top; margin: 0 auto; padding: 0;">
+<head>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="body-class">
     <h1 class="header">PRO STRIKE</h1>
-        <form action="/joinRoom" method="post">
-            <button type="submit"  class="start-btn">Join Room</button>
-            <button class="start-btn">Create Room</button>
-        </form>
-         <script src="/jquery/dist/jquery.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
-    </body>
+    <form class="form-class" action="/joinRoom" method="post">
+        <button type="submit" class="start-btn">Join Room</button>
+        <button class="start-btn">Create Room</button>
+    </form>
+
+</div>
+
+<script src="/jquery/dist/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
 </html>
 
 <script>
     var socket = io.connect('http://127.0.0.1:4200');
-    socket.on('connect', function(data) {
+    socket.on('connect', function (data) {
         socket.emit('join', 'Hello World from client');
     });
-    socket.on('messages', function(data) {
+    socket.on('messages', function (data) {
     });
 </script>

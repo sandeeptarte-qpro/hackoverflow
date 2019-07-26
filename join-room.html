@@ -3,25 +3,26 @@
 <head>
     <link rel="stylesheet" href="app.css">
 </head>
-<body background="/images/gamestart.png" bgcolor="black"
-      style="background-repeat: no-repeat; background-position: center top; margin: 0 auto; padding: 0;">
-<div class="radio-btn">
-<label class="container">Team 1
-    <input type="radio" checked="checked" name="radio">
-    <span class="checkmark"></span>
-</label>
+<body>
+<div class="body-class">
+    <div class="radio-btn ">
+        <label class="container">Team 1
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+        </label>
 
-<label class="container">Team 2
-    <input type="radio" name="radio">
-    <span class="checkmark"></span>
-</label>
-</div>
-<form action="/joinRoom" method="post">
-    <div>
-        <input class="input-class" type="text" placeholder="Enter pin">
-        <button class="start-btn" type="submit">JOIN ROOM</button>
+        <label class="container">Team 2
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
     </div>
-</form>
+    <form class="form-class" action="/startGame" method="post">
+        <div>
+            <input class="input-class" type="text" placeholder="Enter pin">
+            <button class="start-btn" type="submit">JOIN ROOM</button>
+        </div>
+    </form>
+</div>
 <script src="/jquery/dist/jquery.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 </body>
