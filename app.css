@@ -6,8 +6,18 @@ body {
 html,body {
     height: 100%;
 }
-.body-class {
+.body-image1 {
+    background-image: url("images/gamestart.png");
+}
+
+.body-image2 {
     background-image: url("images/armyman2.png");
+}
+
+.body-image3 {
+    background-image: url("images/gamestart.png");
+}
+.body-class {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
